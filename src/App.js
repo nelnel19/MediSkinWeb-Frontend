@@ -29,7 +29,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/charts" element={<Charts/>} />
         <Route path="/analysis" element={<Analysis/>} />
-        <Route path="/skinanalysis" element={<SkinAnalysisAnalysis/>} />
+        <Route path="/skinanalysis" element={<SkinAnalysis/>} />
       </Routes>
     </Router>
   );
