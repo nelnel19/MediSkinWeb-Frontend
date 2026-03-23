@@ -11,6 +11,7 @@ import History from "./pages/History";
 import Dashboard from "./pages/Dashboard";
 import Charts from "./pages/Charts";
 import Analysis from "./pages/Analysis";
+import SkinAnalysis from "./pages/SkinAnalysis";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/charts" element={<Charts/>} />
         <Route path="/analysis" element={<Analysis/>} />
+        <Route path="/skinanalysis" element={<SkinAnalysisAnalysis/>} />
       </Routes>
     </Router>
   );
