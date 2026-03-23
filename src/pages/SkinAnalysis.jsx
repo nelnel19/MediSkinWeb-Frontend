@@ -6,74 +6,33 @@ const SkinAnalysis = () => {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [userId, setUserId] = useState(null);
-  const [userRole, setUserRole] = useState(null);
-  const [viewAll, setViewAll] = useState(false); // toggle
 
-  // Get user info from localStorage
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user) {
-      setUserId(user.email); // use email for history queries
-      setUserRole(user.role);
-    } else {
-      setError("Please log in to view skin analysis history.");
-      setLoading(false);
-    }
-  }, []);
-
-  // Fetch history when viewAll or userId changes
-  useEffect(() => {
-    if (!userId && !viewAll) return;
-    const fetchHistory = async () => {
+    const fetchAllHistory = async () => {
       try {
         setLoading(true);
-        let response;
-        if (viewAll && userRole === 'admin') {
-          // Admin can view all history
-          response = await API.get('/api/skin-history/all');
-        } else {
-          // Normal user or default view
-          response = await API.get(`/api/skin-history/${userId}`);
-        }
-        setHistory(response.data.history);
+        const response = await API.get("/api/skin-history/all");
+        console.log("API response:", response.data);
+        setHistory(response.data.history || []);
       } catch (err) {
-        console.error("Error fetching skin history:", err);
+        console.error("Error fetching history:", err);
         setError(err.response?.data?.message || "Failed to load history");
       } finally {
         setLoading(false);
       }
     };
-    fetchHistory();
-  }, [userId, viewAll, userRole]);
+    fetchAllHistory();
+  }, []);
 
-  if (loading) return <div className="history-loading">Loading your analysis history...</div>;
+  if (loading) return <div className="history-loading">Loading analysis history...</div>;
   if (error) return <div className="history-error">{error}</div>;
 
   return (
     <div className="skin-analysis-container">
-      {/* Analysis form goes here – your existing analysis UI */}
-
-      {/* Admin toggle */}
-      {userRole === 'admin' && (
-        <div className="admin-toggle">
-          <button
-            className={!viewAll ? 'active' : ''}
-            onClick={() => setViewAll(false)}
-          >
-            My History
-          </button>
-          <button
-            className={viewAll ? 'active' : ''}
-            onClick={() => setViewAll(true)}
-          >
-            All Users History
-          </button>
-        </div>
-      )}
+      {/* Your analysis form goes here (if any) */}
 
       <div className="skin-history-section">
-        <h2>{viewAll ? 'All Users Skin Analysis History' : 'Your Skin Analysis History'}</h2>
+        <h2>All Skin Analysis History</h2>
         {history.length === 0 ? (
           <p>No analyses yet.</p>
         ) : (
@@ -82,18 +41,13 @@ const SkinAnalysis = () => {
               <div key={item._id} className="history-card">
                 <img src={item.image_url} alt="Skin analysis" className="history-img" />
                 <div className="history-info">
-                  {viewAll && item.user && (
-                    <div className="user-info">
-                      <strong>{item.user.name}</strong> ({item.user.email})
-                    </div>
-                  )}
-                  <h3>{item.prediction.disease}</h3>
-                  <p>Confidence: {item.prediction.confidence}%</p>
+                  <h3>{item.prediction?.disease || "Unknown"}</h3>
+                  <p>Confidence: {item.prediction?.confidence || "N/A"}%</p>
                   <p className="date">{new Date(item.created_at).toLocaleDateString()}</p>
                   <details>
                     <summary>View Details</summary>
-                    <p>{item.prediction.description}</p>
-                    {item.prediction.medication_info?.has_medications && (
+                    <p>{item.prediction?.description}</p>
+                    {item.prediction?.medication_info?.has_medications && (
                       <>
                         <h4>Recommended Treatments</h4>
                         <ul>
