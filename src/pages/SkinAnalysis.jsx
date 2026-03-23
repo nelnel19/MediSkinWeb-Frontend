@@ -1,31 +1,41 @@
 import React, { useState, useEffect } from "react";
 import API from "../api/axios";
-import "../styles/skinanalysis.css"; // optional styles
+import "../styles/skinanalysis.css";
 
 const SkinAnalysis = () => {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [userId, setUserId] = useState(null);
+  const [userRole, setUserRole] = useState(null);
+  const [viewAll, setViewAll] = useState(false); // toggle
 
-  // Get logged-in user from localStorage (adjust based on your auth)
+  // Get user info from localStorage
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user && user._id) {
-      setUserId(user._id);
+    if (user) {
+      setUserId(user.email); // use email for history queries
+      setUserRole(user.role);
     } else {
-      setError("Please log in to view your skin analysis history.");
+      setError("Please log in to view skin analysis history.");
       setLoading(false);
     }
   }, []);
 
-  // Fetch history when userId changes
+  // Fetch history when viewAll or userId changes
   useEffect(() => {
-    if (!userId) return;
+    if (!userId && !viewAll) return;
     const fetchHistory = async () => {
       try {
         setLoading(true);
-        const response = await API.get(`/api/skin-history/${userId}`);
+        let response;
+        if (viewAll && userRole === 'admin') {
+          // Admin can view all history
+          response = await API.get('/api/skin-history/all');
+        } else {
+          // Normal user or default view
+          response = await API.get(`/api/skin-history/${userId}`);
+        }
         setHistory(response.data.history);
       } catch (err) {
         console.error("Error fetching skin history:", err);
@@ -35,7 +45,7 @@ const SkinAnalysis = () => {
       }
     };
     fetchHistory();
-  }, [userId]);
+  }, [userId, viewAll, userRole]);
 
   if (loading) return <div className="history-loading">Loading your analysis history...</div>;
   if (error) return <div className="history-error">{error}</div>;
@@ -44,17 +54,39 @@ const SkinAnalysis = () => {
     <div className="skin-analysis-container">
       {/* Analysis form goes here – your existing analysis UI */}
 
-      {/* History section */}
+      {/* Admin toggle */}
+      {userRole === 'admin' && (
+        <div className="admin-toggle">
+          <button
+            className={!viewAll ? 'active' : ''}
+            onClick={() => setViewAll(false)}
+          >
+            My History
+          </button>
+          <button
+            className={viewAll ? 'active' : ''}
+            onClick={() => setViewAll(true)}
+          >
+            All Users History
+          </button>
+        </div>
+      )}
+
       <div className="skin-history-section">
-        <h2>Your Skin Analysis History</h2>
+        <h2>{viewAll ? 'All Users Skin Analysis History' : 'Your Skin Analysis History'}</h2>
         {history.length === 0 ? (
-          <p>No analyses yet. Try scanning your skin!</p>
+          <p>No analyses yet.</p>
         ) : (
           <div className="history-grid">
             {history.map((item) => (
               <div key={item._id} className="history-card">
                 <img src={item.image_url} alt="Skin analysis" className="history-img" />
                 <div className="history-info">
+                  {viewAll && item.user && (
+                    <div className="user-info">
+                      <strong>{item.user.name}</strong> ({item.user.email})
+                    </div>
+                  )}
                   <h3>{item.prediction.disease}</h3>
                   <p>Confidence: {item.prediction.confidence}%</p>
                   <p className="date">{new Date(item.created_at).toLocaleDateString()}</p>
