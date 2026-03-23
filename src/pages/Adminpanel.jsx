@@ -48,8 +48,8 @@ const Adminpanel = ({ children }) => {
     { id: 'dashboard', label: 'Dashboard', icon: <MdDashboard size={20} />, path: '/dashboard' },
     { id: 'users', label: 'Users', icon: <FiUsers size={20} />, path: '/users' },
     { id: 'history', label: 'History', icon: <FiCalendar size={20} />, path: '/history' },
-    { id: 'analysis', label: 'Face Analysis', icon: <FiActivity size={20} />, path: '/analysis' },
-    { id: 'insights', label: 'Skin Analysis', icon: <FiPieChart size={20} />, path: '/admin/insights' },
+    { id: 'analysis', label: 'Face Analyses', icon: <FiActivity size={20} />, path: '/analysis' },
+    { id: 'insights', label: 'Skin Analyses', icon: <FiPieChart size={20} />, path: '/admin/insights' },
     { id: 'verification', label: 'Verification', icon: <FiUserCheck size={20} />, path: '/admin/verification' },
   ];
 
