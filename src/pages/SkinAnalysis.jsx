@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../api/axios";
-import "..styles/skinanalysis.css"; // optional styles
+import "../styles/skinanalysis.css"; // optional styles
 
 const SkinAnalysis = () => {
   const [history, setHistory] = useState([]);
