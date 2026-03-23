@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000", // change if deployed
+  baseURL: "https://mediskinweb-backend.onrender.com", // change if deployed
 });
 
 export default API;
