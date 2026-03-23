@@ -13,7 +13,8 @@ import {
   FiChevronUp,
   FiChevronDown,
   FiHash,
-  FiFilter
+  FiFilter,
+  FiTrash2          // NEW: import delete icon
 } from "react-icons/fi";
 import { HiOutlineCake } from "react-icons/hi";
 
@@ -44,6 +45,21 @@ const Users = () => {
       setUsers([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // NEW: Delete user function
+  const deleteUser = async (userId, userName) => {
+    if (!window.confirm(`Are you sure you want to delete user "${userName || 'Unknown'}"? This action cannot be undone.`)) {
+      return;
+    }
+    try {
+      await API.delete(`/auth/${userId}`);
+      // Refresh the user list after deletion
+      fetchUsers();
+    } catch (err) {
+      console.error("Delete error:", err);
+      alert(err.response?.data?.message || "Failed to delete user");
     }
   };
 
@@ -309,6 +325,13 @@ const Users = () => {
                       <span>ID</span>
                     </div>
                   </th>
+                  {/* NEW: Actions column header */}
+                  <th>
+                    <div className="table-header-cell">
+                      <FiTrash2 size={14} />
+                      <span>Actions</span>
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -373,11 +396,21 @@ const Users = () => {
                           )}
                         </div>
                       </td>
+                      {/* NEW: Delete button */}
+                      <td>
+                        <button
+                          onClick={() => deleteUser(user._id, user.name)}
+                          className="delete-btn"
+                          title="Delete user"
+                        >
+                          <FiTrash2 size={14} />
+                        </button>
+                      </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="5" className="empty-state">
+                    <td colSpan="6" className="empty-state">
                       <div className="empty-content">
                         <FiUser size={32} />
                         <h4>No users found</h4>
