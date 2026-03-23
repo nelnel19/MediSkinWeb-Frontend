@@ -1,5 +1,5 @@
-/* Minimalist History Component - Professional Design */
-.history-minimal-container {
+/* ==================== MAIN CONTAINER ==================== */
+.skin-analysis-container {
   width: 100%;
   padding: 2rem;
   background: #ffffff;
@@ -9,39 +9,39 @@
   font-size: 14px;
 }
 
-/* Header */
-.history-minimal-container .minimal-header {
+/* ==================== HEADER ==================== */
+.skin-analysis-container .minimal-header {
   margin-bottom: 2rem;
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 1.5rem;
 }
 
-.history-minimal-container .minimal-title {
+.skin-analysis-container .minimal-title {
   font-size: 1.75rem;
   font-weight: 600;
   color: #111827;
   margin: 0 0 0.25rem 0;
 }
 
-.history-minimal-container .minimal-subtitle {
+.skin-analysis-container .minimal-subtitle {
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
 }
 
-.history-minimal-container .header-controls {
+.skin-analysis-container .header-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
 }
 
-.history-minimal-container .search-box {
+.skin-analysis-container .search-box {
   position: relative;
   width: 280px;
 }
 
-.history-minimal-container .minimal-search {
+.skin-analysis-container .minimal-search {
   width: 100%;
   padding: 0.5rem 0.75rem 0.5rem 2rem;
   border: 1px solid #d1d5db;
@@ -52,13 +52,13 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .minimal-search:focus {
+.skin-analysis-container .minimal-search:focus {
   outline: none;
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.history-minimal-container .search-icon {
+.skin-analysis-container .search-icon {
   position: absolute;
   left: 0.75rem;
   top: 50%;
@@ -67,13 +67,13 @@
   pointer-events: none;
 }
 
-.history-minimal-container .action-buttons {
+.skin-analysis-container .action-buttons {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
-.history-minimal-container .minimal-btn {
+.skin-analysis-container .minimal-btn {
   padding: 0.5rem 0.75rem;
   border: 1px solid #d1d5db;
   border-radius: 6px;
@@ -87,36 +87,36 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .minimal-btn.icon {
+.skin-analysis-container .minimal-btn.icon {
   padding: 0.5rem;
   min-width: 36px;
   justify-content: center;
 }
 
-.history-minimal-container .minimal-btn.primary {
+.skin-analysis-container .minimal-btn.primary {
   background: #111827;
   color: #ffffff;
   border-color: #111827;
 }
 
-.history-minimal-container .minimal-btn:hover {
+.skin-analysis-container .minimal-btn:hover {
   border-color: #9ca3af;
 }
 
-.history-minimal-container .minimal-btn.primary:hover {
+.skin-analysis-container .minimal-btn.primary:hover {
   background: #1f2937;
   border-color: #1f2937;
 }
 
-/* Stats */
-.history-minimal-container .minimal-stats {
+/* ==================== STATS ==================== */
+.skin-analysis-container .minimal-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.history-minimal-container .stat-card {
+.skin-analysis-container .stat-card {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -125,12 +125,12 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .stat-card:hover {
+.skin-analysis-container .stat-card:hover {
   border-color: #d1d5db;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.history-minimal-container .stat-number {
+.skin-analysis-container .stat-number {
   display: block;
   font-size: 2rem;
   font-weight: 600;
@@ -139,22 +139,22 @@
   font-feature-settings: "tnum";
 }
 
-.history-minimal-container .stat-label {
+.skin-analysis-container .stat-label {
   font-size: 0.875rem;
   color: #6b7280;
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
 
-/* Table Container */
-.history-minimal-container .minimal-table-container {
+/* ==================== TABLE CONTAINER ==================== */
+.skin-analysis-container .minimal-table-container {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.history-minimal-container .table-header-row {
+.skin-analysis-container .table-header-row {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #e5e7eb;
   display: flex;
@@ -163,14 +163,14 @@
   background: #f9fafb;
 }
 
-.history-minimal-container .table-title {
+.skin-analysis-container .table-title {
   font-size: 1.125rem;
   font-weight: 500;
   color: #111827;
   margin: 0;
 }
 
-.history-minimal-container .record-count {
+.skin-analysis-container .record-count {
   font-size: 0.75rem;
   color: #6b7280;
   background: #e5e7eb;
@@ -178,18 +178,18 @@
   border-radius: 4px;
 }
 
-/* Table */
-.history-minimal-container .table-wrapper {
+/* ==================== TABLE ==================== */
+.skin-analysis-container .table-wrapper {
   overflow-x: auto;
 }
 
-.history-minimal-container .minimal-table {
+.skin-analysis-container .minimal-table {
   width: 100%;
   border-collapse: collapse;
   min-width: 800px;
 }
 
-.history-minimal-container .minimal-table th {
+.skin-analysis-container .minimal-table th {
   padding: 1rem 1.5rem;
   text-align: left;
   font-size: 0.75rem;
@@ -204,43 +204,43 @@
   white-space: nowrap;
 }
 
-.history-minimal-container .minimal-table th:last-child {
+.skin-analysis-container .minimal-table th:last-child {
   cursor: default;
 }
 
-.history-minimal-container .table-head {
+.skin-analysis-container .table-head {
   display: flex;
   align-items: center;
   gap: 0.375rem;
 }
 
-.history-minimal-container .sort-indicator {
+.skin-analysis-container .sort-indicator {
   color: #3b82f6;
 }
 
-.history-minimal-container .minimal-table td {
+.skin-analysis-container .minimal-table td {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #f3f4f6;
   font-size: 0.875rem;
   vertical-align: middle;
 }
 
-.history-minimal-container .table-row:last-child td {
+.skin-analysis-container .table-row:last-child td {
   border-bottom: none;
 }
 
-.history-minimal-container .table-row:hover td {
+.skin-analysis-container .table-row:hover td {
   background: #f9fafb;
 }
 
 /* User Info Cell */
-.history-minimal-container .user-info-cell {
+.skin-analysis-container .user-info-cell {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.history-minimal-container .user-initials {
+.skin-analysis-container .user-initials {
   width: 32px;
   height: 32px;
   border-radius: 6px;
@@ -254,13 +254,13 @@
   flex-shrink: 0;
 }
 
-.history-minimal-container .user-email {
+.skin-analysis-container .user-email {
   color: #111827;
   font-weight: 400;
 }
 
 /* Grade Tag */
-.history-minimal-container .grade-tag {
+.skin-analysis-container .grade-tag {
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -269,13 +269,13 @@
 }
 
 /* Condition Text */
-.history-minimal-container .condition-text {
+.skin-analysis-container .condition-text {
   color: #374151;
   font-weight: 400;
 }
 
 /* Date Cell */
-.history-minimal-container .date-cell {
+.skin-analysis-container .date-cell {
   display: flex;
   align-items: center;
   gap: 0.375rem;
@@ -284,12 +284,12 @@
 }
 
 /* Action Buttons */
-.history-minimal-container .action-buttons-cell {
+.skin-analysis-container .action-buttons-cell {
   display: flex;
   gap: 0.375rem;
 }
 
-.history-minimal-container .action-icon {
+.skin-analysis-container .action-icon {
   width: 28px;
   height: 28px;
   border-radius: 4px;
@@ -303,25 +303,25 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .action-icon.view:hover {
+.skin-analysis-container .action-icon.view:hover {
   background: #111827;
   border-color: #111827;
   color: #ffffff;
 }
 
-.history-minimal-container .action-icon.delete:hover {
+.skin-analysis-container .action-icon.delete:hover {
   background: #dc2626;
   border-color: #dc2626;
   color: #ffffff;
 }
 
 /* Empty State */
-.history-minimal-container .empty-state {
+.skin-analysis-container .empty-state {
   text-align: center;
   padding: 4rem 1rem;
 }
 
-.history-minimal-container .empty-content {
+.skin-analysis-container .empty-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,26 +330,26 @@
   margin: 0 auto;
 }
 
-.history-minimal-container .empty-content h4 {
+.skin-analysis-container .empty-content h4 {
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
   color: #111827;
 }
 
-.history-minimal-container .empty-content p {
+.skin-analysis-container .empty-content p {
   margin: 0;
   font-size: 0.875rem;
   color: #6b7280;
   line-height: 1.4;
 }
 
-.history-minimal-container .empty-content svg {
+.skin-analysis-container .empty-content svg {
   color: #d1d5db;
 }
 
 /* Loading State */
-.history-minimal-container .minimal-loading {
+.skin-analysis-container .minimal-loading {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +357,7 @@
   min-height: 400px;
 }
 
-.history-minimal-container .minimal-spinner {
+.skin-analysis-container .minimal-spinner {
   width: 40px;
   height: 40px;
   border: 3px solid #f3f4f6;
@@ -373,13 +373,13 @@
   }
 }
 
-.history-minimal-container .minimal-loading p {
+.skin-analysis-container .minimal-loading p {
   color: #6b7280;
   font-size: 0.875rem;
 }
 
-/* Minimal Modal */
-.history-minimal-container .minimal-modal-overlay {
+/* ==================== MODAL ==================== */
+.skin-analysis-container .minimal-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -404,7 +404,7 @@
   }
 }
 
-.history-minimal-container .minimal-modal {
+.skin-analysis-container .minimal-modal {
   background: #ffffff;
   border-radius: 12px;
   width: 100%;
@@ -429,7 +429,7 @@
 }
 
 /* Modal Header */
-.history-minimal-container .modal-header {
+.skin-analysis-container .modal-header {
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid #e5e7eb;
   display: flex;
@@ -437,18 +437,18 @@
   align-items: flex-start;
 }
 
-.history-minimal-container .modal-header-content {
+.skin-analysis-container .modal-header-content {
   flex: 1;
 }
 
-.history-minimal-container .modal-header h3 {
+.skin-analysis-container .modal-header h3 {
   margin: 0 0 0.375rem 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: #111827;
 }
 
-.history-minimal-container .modal-subtext {
+.skin-analysis-container .modal-subtext {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -456,7 +456,7 @@
   color: #6b7280;
 }
 
-.history-minimal-container .modal-id {
+.skin-analysis-container .modal-id {
   font-family: 'SF Mono', monospace;
   background: #f3f4f6;
   padding: 0.125rem 0.375rem;
@@ -464,7 +464,7 @@
   color: #4b5563;
 }
 
-.history-minimal-container .modal-close {
+.skin-analysis-container .modal-close {
   background: none;
   border: none;
   padding: 0.25rem;
@@ -475,489 +475,28 @@
   flex-shrink: 0;
 }
 
-.history-minimal-container .modal-close:hover {
+.skin-analysis-container .modal-close:hover {
   background: #f3f4f6;
   color: #111827;
 }
 
 /* Modal Content */
-.history-minimal-container .modal-content {
+.skin-analysis-container .modal-content {
   padding: 1.5rem;
   overflow-y: auto;
   flex: 1;
+  max-height: calc(85vh - 120px);
 }
 
-/* Summary Row */
-.history-minimal-container .summary-row {
-  display: flex;
-  gap: 2rem;
-  padding: 1rem;
-  background: #f9fafb;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  border: 1px solid #e5e7eb;
-}
-
-.history-minimal-container .summary-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.history-minimal-container .summary-item label {
-  font-size: 0.75rem;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.history-minimal-container .summary-value {
-  font-size: 0.875rem;
-  color: #111827;
-  font-weight: 500;
-}
-
-.history-minimal-container .summary-value.grade {
-  font-weight: 600;
-}
-
-/* Modal Main Content */
-.history-minimal-container .modal-main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Modal Section */
-.history-minimal-container .modal-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.history-minimal-container .modal-section h4 {
-  margin: 0;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #111827;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.history-minimal-container .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.history-minimal-container .section-count {
-  font-size: 0.75rem;
-  color: #6b7280;
-  background: #f3f4f6;
-  padding: 0.125rem 0.375rem;
-  border-radius: 4px;
-}
-
-.history-minimal-container .external-link {
-  color: #6b7280;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.history-minimal-container .external-link:hover {
-  color: #111827;
-}
-
-/* Image Container */
-.history-minimal-container .image-container {
-  width: 100%;
-  height: 200px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-}
-
-.history-minimal-container .analysis-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 1rem;
-}
-
-.history-minimal-container .image-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-  font-size: 0.875rem;
-}
-
-/* Metrics Grid */
-.history-minimal-container .metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-}
-
-.history-minimal-container .metric-item {
-  padding: 0.75rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-}
-
-.history-minimal-container .metric-name {
-  font-size: 0.75rem;
-  color: #6b7280;
-  margin-bottom: 0.25rem;
-}
-
-.history-minimal-container .metric-value {
-  font-family: 'SF Mono', monospace;
-  font-size: 0.875rem;
-  color: #111827;
-  font-weight: 500;
-}
-
-/* Details List */
-.history-minimal-container .details-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.history-minimal-container .detail-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #f3f4f6;
-}
-
-.history-minimal-container .detail-row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.history-minimal-container .detail-label {
-  font-size: 0.75rem;
-  color: #6b7280;
-}
-
-.history-minimal-container .detail-value {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #111827;
-}
-
-.history-minimal-container .id-code {
-  font-family: 'SF Mono', monospace;
-  font-size: 0.75rem;
-  color: #4b5563;
-  background: #f3f4f6;
-  padding: 0.125rem 0.375rem;
-  border-radius: 2px;
-}
-
-.history-minimal-container .copy-icon {
-  background: none;
-  border: none;
-  color: #9ca3af;
-  cursor: pointer;
-  padding: 0.125rem;
-  border-radius: 2px;
-  transition: all 0.2s;
-}
-
-.history-minimal-container .copy-icon:hover {
-  color: #111827;
-  background: #f3f4f6;
-}
-
-/* Modal Footer */
-.history-minimal-container .modal-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid #e5e7eb;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.history-minimal-container .modal-btn {
-  padding: 0.5rem 1.5rem;
-  background: #111827;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.history-minimal-container .modal-btn:hover {
-  background: #1f2937;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .history-minimal-container {
-    padding: 1rem;
-  }
-  
-  .history-minimal-container .header-controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  }
-  
-  .history-minimal-container .search-box {
-    width: 100%;
-  }
-  
-  .history-minimal-container .minimal-stats {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  .history-minimal-container .summary-row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .history-minimal-container .minimal-modal {
-    max-height: 90vh;
-    margin: 0;
-  }
-  
-  .history-minimal-container .metrics-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .history-minimal-container .minimal-table {
-    min-width: 600px;
-  }
-}
-
-@media (max-width: 640px) {
-  .history-minimal-container .minimal-title {
-    font-size: 1.5rem;
-  }
-  
-  .history-minimal-container .table-header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-}
-/* Add these styles to your existing history.css */
-
-/* Status Tags */
-.status-tag,
-.tone-tag,
-.moisture-tag,
-.pore-tag {
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #ffffff;
-  display: inline-block;
-}
-
-.tone-tag {
-  background: #8B5CF6;
-  color: #ffffff;
-}
-
-/* Face Analysis Grid */
-.face-analysis-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.face-detail-row {
+/* Summary Cards */
+.skin-analysis-container .summary-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.face-detail-item {
-  padding: 0.75rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.face-detail-label {
-  font-size: 0.75rem;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.face-detail-value {
-  font-size: 0.875rem;
-  color: #111827;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* Raw Scores Grid */
-.raw-scores-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-}
-
-.raw-score-item {
-  padding: 0.75rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-}
-
-.raw-score-label {
-  font-size: 0.75rem;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.raw-score-value {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.score-number {
-  font-family: 'SF Mono', monospace;
-  font-size: 0.875rem;
-  color: #111827;
-  font-weight: 500;
-  min-width: 40px;
-}
-
-.score-bar-container {
-  flex: 1;
-  height: 6px;
-  background: #e5e7eb;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.score-bar {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 0.3s ease;
-}
-
-/* Modal User */
-.modal-user {
-  background: #f3f4f6;
-  padding: 0.125rem 0.375rem;
-  border-radius: 2px;
-  color: #4b5563;
-}
-
-/* Condition summary */
-.summary-value.condition {
-  font-weight: 600;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .face-detail-row {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  .raw-scores-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* Age-Gender Cell */
-.history-minimal-container .age-gender-cell {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #374151;
-  font-size: 0.875rem;
-}
-
-.history-minimal-container .age-gender-cell .age-value {
-  font-weight: 500;
-  color: #111827;
-}
-
-.history-minimal-container .age-gender-cell .gender-value {
-  color: #6b7280;
-  font-size: 0.75rem;
-  background: #f3f4f6;
-  padding: 0.125rem 0.375rem;
-  border-radius: 4px;
-}
-
-/* Add a divider if you want one */
-.history-minimal-container .age-gender-cell .age-value:after {
-  content: '•';
-  margin-left: 0.5rem;
-  color: #d1d5db;
-}
-
-/* Or use a vertical divider */
-.history-minimal-container .age-gender-cell .age-value {
-  position: relative;
-  padding-right: 0.5rem;
-  margin-right: 0.5rem;
-  border-right: 1px solid #e5e7eb;
-}
-
-/* Skin Grade Display Styles */
-.history-minimal-container .skin-grade-object-display {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.history-minimal-container .grade-badge-large {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 24px;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  min-width: 70px;
-}
-
-.history-minimal-container .grade-description {
-  font-size: 13px;
-  color: #4b5563;
-  font-weight: 500;
-}
-
-.history-minimal-container .grade-score {
-  font-size: 12px;
-  color: #6b7280;
-}
-
-.history-minimal-container .skin-grade-display {
-  width: 100%;
-}
-
-/* Summary Cards Update */
-.history-minimal-container .summary-card {
+.skin-analysis-container .summary-card {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -968,7 +507,7 @@
   flex: 1;
 }
 
-.history-minimal-container .summary-card .summary-icon {
+.skin-analysis-container .summary-card .summary-icon {
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -980,11 +519,11 @@
   color: #111827;
 }
 
-.history-minimal-container .summary-card .summary-info {
+.skin-analysis-container .summary-card .summary-info {
   flex: 1;
 }
 
-.history-minimal-container .summary-card .summary-info label {
+.skin-analysis-container .summary-card .summary-info label {
   font-size: 11px;
   color: #6b7280;
   margin-bottom: 4px;
@@ -993,173 +532,62 @@
   letter-spacing: 0.025em;
 }
 
-.history-minimal-container .grade-main {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.history-minimal-container .condition-main,
-.history-minimal-container .confidence-main {
+.skin-analysis-container .grade-main,
+.skin-analysis-container .confidence-main {
   font-size: 16px;
   font-weight: 500;
   color: #111827;
 }
 
-.history-minimal-container .grade-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.history-minimal-container .grade-desc {
-  font-size: 12px;
-  color: #4b5563;
-}
-
-/* Condition Badge */
-.history-minimal-container .condition-badge {
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.5rem;
-  background: #f3f4f6;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-/* Info Grid */
-.history-minimal-container .info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-.history-minimal-container .info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.history-minimal-container .info-label {
-  font-size: 0.7rem;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-}
-
-.history-minimal-container .info-value {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #111827;
-}
-
-/* Attributes Grid */
-.history-minimal-container .attributes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-.history-minimal-container .attribute-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.history-minimal-container .attribute-label {
-  font-size: 0.7rem;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-}
-
-.history-minimal-container .attribute-value {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #111827;
-}
-
-/* Scores Container */
-.history-minimal-container .scores-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-.history-minimal-container .score-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.history-minimal-container .score-label {
-  font-size: 0.8rem;
-  color: #4b5563;
-  min-width: 120px;
-}
-
-.history-minimal-container .score-bar-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  height: 24px;
-}
-
-.history-minimal-container .score-bar {
-  height: 8px;
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-.history-minimal-container .score-value {
-  font-size: 0.8rem;
-  font-family: 'SF Mono', monospace;
-  color: #111827;
-  min-width: 50px;
-  text-align: right;
-}
-
 /* Two Column Layout */
-.history-minimal-container .two-column-layout {
+.skin-analysis-container .two-column-layout {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.history-minimal-container .left-column,
-.history-minimal-container .right-column {
+.skin-analysis-container .left-column,
+.skin-analysis-container .right-column {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Summary Cards Container */
-.history-minimal-container .summary-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
 /* Image Section */
-.history-minimal-container .image-section {
+.skin-analysis-container .image-section {
   position: relative;
 }
 
-.history-minimal-container .image-external-link {
+.skin-analysis-container .image-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.skin-analysis-container .analysis-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem;
+}
+
+.skin-analysis-container .image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.skin-analysis-container .image-external-link {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -1176,18 +604,34 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .image-external-link:hover {
+.skin-analysis-container .image-external-link:hover {
   background: #ffffff;
   border-color: #d1d5db;
   transform: scale(1.05);
 }
 
-/* Full Data Section */
-.history-minimal-container .full-data {
+/* Modal Sections */
+.skin-analysis-container .modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skin-analysis-container .modal-section h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skin-analysis-container .full-data {
   margin-top: 1rem;
 }
 
-.history-minimal-container .analysis-data-pre {
+/* Full Data Pre */
+.skin-analysis-container .analysis-data-pre {
   padding: 1rem;
   background: #1e1e1e;
   color: #d4d4d4;
@@ -1202,13 +646,8 @@
   overflow-y: auto;
 }
 
-/* Detailed Modal */
-.history-minimal-container .detailed-modal {
-  max-width: 1000px;
-}
-
-/* Pagination Controls */
-.history-minimal-container .pagination-controls {
+/* Pagination */
+.skin-analysis-container .pagination-controls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1217,7 +656,7 @@
   border-top: 1px solid #e5e7eb;
 }
 
-.history-minimal-container .pagination-btn {
+.skin-analysis-container .pagination-btn {
   padding: 0.5rem 1rem;
   border: 1px solid #d1d5db;
   border-radius: 6px;
@@ -1228,69 +667,22 @@
   transition: all 0.2s;
 }
 
-.history-minimal-container .pagination-btn:hover:not(:disabled) {
+.skin-analysis-container .pagination-btn:hover:not(:disabled) {
   background: #f9fafb;
   border-color: #9ca3af;
 }
 
-.history-minimal-container .pagination-btn:disabled {
+.skin-analysis-container .pagination-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.history-minimal-container .pagination-info {
+.skin-analysis-container .pagination-info {
   font-size: 0.875rem;
   color: #6b7280;
 }
 
-/* Responsive Design Updates */
-@media (max-width: 1024px) {
-  .history-minimal-container .two-column-layout {
-    grid-template-columns: 1fr;
-  }
-  
-  .history-minimal-container .summary-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .history-minimal-container .age-gender-cell {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  
-  .history-minimal-container .age-gender-cell .age-value:after {
-    display: none;
-  }
-  
-  .history-minimal-container .age-gender-cell .age-value {
-    border-right: none;
-    padding-right: 0;
-    margin-right: 0;
-  }
-  
-  .history-minimal-container .info-grid,
-  .history-minimal-container .attributes-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .history-minimal-container .score-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  
-  .history-minimal-container .score-label {
-    min-width: auto;
-  }
-  
-  .history-minimal-container .score-bar-container {
-    width: 100%;
-  }
-}
-/* Additional styles for SkinAnalysis component */
+/* ==================== SKIN-SPECIFIC STYLES ==================== */
 .disease-tag {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -1330,23 +722,95 @@
   line-height: 1.4;
 }
 
-.analysis-data-pre {
-  padding: 1rem;
-  background: #1e1e1e;
-  color: #d4d4d4;
-  border-radius: 6px;
-  font-family: 'SF Mono', 'Courier New', monospace;
-  font-size: 12px;
-  line-height: 1.5;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  max-height: 300px;
-  overflow-y: auto;
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+  .skin-analysis-container .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skin-analysis-container .summary-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Ensure modal content doesn't overflow */
-.modal-content {
-  overflow-y: auto;
-  max-height: calc(85vh - 120px);
+@media (max-width: 768px) {
+  .skin-analysis-container {
+    padding: 1rem;
+  }
+
+  .skin-analysis-container .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .skin-analysis-container .search-box {
+    width: 100%;
+  }
+
+  .skin-analysis-container .minimal-stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .skin-analysis-container .minimal-modal {
+    max-height: 90vh;
+    margin: 0;
+  }
+
+  .skin-analysis-container .minimal-table {
+    min-width: 600px;
+  }
+
+  .skin-analysis-container .info-grid,
+  .skin-analysis-container .attributes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .skin-analysis-container .minimal-title {
+    font-size: 1.5rem;
+  }
+
+  .skin-analysis-container .table-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .skin-analysis-container .age-gender-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .skin-analysis-container .age-gender-cell .age-value:after {
+    display: none;
+  }
+
+  .skin-analysis-container .age-gender-cell .age-value {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .skin-analysis-container .info-grid,
+  .skin-analysis-container .attributes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skin-analysis-container .score-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .skin-analysis-container .score-label {
+    min-width: auto;
+  }
+
+  .skin-analysis-container .score-bar-container {
+    width: 100%;
+  }
 }

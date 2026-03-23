@@ -17,7 +17,8 @@ import {
   FiMail,
   FiTag,
   FiActivity,
-  FiCpu
+  FiCpu,
+  FiInfo
 } from "react-icons/fi";
 
 const SkinAnalysis = () => {
@@ -27,6 +28,12 @@ const SkinAnalysis = () => {
   const [sortConfig, setSortConfig] = useState({ key: "created_at", direction: "desc" });
   const [selectedHistory, setSelectedHistory] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [pagination, setPagination] = useState({
+    page: 1,
+    limit: 20,
+    total: 0,
+    pages: 0
+  });
 
   useEffect(() => {
     fetchAllHistory();
@@ -36,8 +43,14 @@ const SkinAnalysis = () => {
     try {
       setLoading(true);
       const response = await API.get("/api/skin-history/all");
-      console.log("API response:", response.data);
-      setHistories(response.data.history || []);
+      const data = response.data.history || [];
+      setHistories(data);
+      setPagination({
+        page: 1,
+        limit: 20,
+        total: data.length,
+        pages: Math.ceil(data.length / 20)
+      });
     } catch (err) {
       console.error("Error fetching history:", err);
       setHistories([]);
@@ -87,9 +100,7 @@ const SkinAnalysis = () => {
     }
 
     if (sortConfig.key === "confidence") {
-      return sortConfig.direction === "asc"
-        ? aValue - bValue
-        : bValue - aValue;
+      return sortConfig.direction === "asc" ? aValue - bValue : bValue - aValue;
     }
 
     const aStr = String(aValue || "").toLowerCase();
@@ -124,10 +135,10 @@ const SkinAnalysis = () => {
   };
 
   const getConfidenceColor = (confidence) => {
-    if (confidence >= 80) return "#10B981"; // green
-    if (confidence >= 60) return "#3B82F6"; // blue
-    if (confidence >= 40) return "#F59E0B"; // orange
-    return "#EF4444"; // red
+    if (confidence >= 80) return "#10B981";
+    if (confidence >= 60) return "#3B82F6";
+    if (confidence >= 40) return "#F59E0B";
+    return "#EF4444";
   };
 
   const handleDelete = async (id) => {
@@ -363,6 +374,29 @@ const SkinAnalysis = () => {
             </tbody>
           </table>
         </div>
+
+        {/* Pagination */}
+        {pagination.pages > 1 && (
+          <div className="pagination-controls">
+            <button
+              onClick={() => setPagination(prev => ({ ...prev, page: prev.page - 1 }))}
+              disabled={pagination.page === 1}
+              className="pagination-btn"
+            >
+              Previous
+            </button>
+            <span className="pagination-info">
+              Page {pagination.page} of {pagination.pages}
+            </span>
+            <button
+              onClick={() => setPagination(prev => ({ ...prev, page: prev.page + 1 }))}
+              disabled={pagination.page === pagination.pages}
+              className="pagination-btn"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Modal for details */}
